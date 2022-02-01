@@ -2,7 +2,8 @@ version: '3.6'
 
 services:
   nodered:
-    image: ghcr.io/ct-open-source/ctnodered:latest
+    # 2022-01-06: latest läuft nicht auf raspberry pi
+    image: ghcr.io/ct-open-source/ctnodered@sha256:6d3b1b0c98986c49b83debfc306b7e02efa6737eb10ea9da79b59f75e46ac028
     volumes:
       - ./data/nodered:/data
       - /etc/localtime:/etc/localtime
