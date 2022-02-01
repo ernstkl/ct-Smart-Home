@@ -22,7 +22,11 @@ function detect_zigbee_device {
 function create_mosquitto_config {
 	cat > data/mqtt/config/mosquitto.conf <<EOF
 
-log_type all
+log_type error
+log_type warning
+#log_type notice
+#log_type information
+#log_type all
 
 listener 1883
 listener 9001 
